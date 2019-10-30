@@ -1,21 +1,13 @@
-<?php
-$host = 'mysql:host=localhost;dbname=escola;port=3307';
-$user = 'root';
-$pass = '';
-$pdo = new PDO($host, $user, $pass );
-$query = $pdo->query("SELECT * FROM cursos "); 
-$cursos = $query->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loja do Vinão</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <title>Loja do Vinão</title>
 </head>
 <body>
 <header class="top-bar">
@@ -27,23 +19,48 @@ $cursos = $query->fetchAll(PDO::FETCH_ASSOC);
     <ul>
         <li>Masculino</li>
         <li>Feminino</li>
-        <li>Area do cliente</li>
+        <li>Painel de Administração</li>
     </ul>
 </nav>
 </header>
-    <main>
-    <div class="model">
-        <form method="post">
-            <input type="text" name="nome"  placeholder="Nome do aluno" required>
-            <input type="text" name="ra" placeholder="RA do aluno" required>
-            <select>
-            <?php foreach($cursos as $curso){ ?>
-                <option value="<?php echo $curso["id"] ;?>"> <?= $curso["nome"] ;?> </option>
-                <?php } ?>
-            </select>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-    </main>
+   <main class="d-flex">
+        <div class="lista">
+        <h2>Todos Os produtos</h2>
+<table class="table mt-4">
+  <thead>
+    <tr class="top-table">
+      <th scope="col">id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Preço</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Camiseta Javacript</td>
+      <td>Camisetas</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Camiseta PHP</td>
+      <td>Camisetas</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Camiseta React</td>
+      <td>Camisetas</td>
+      <td>30.00</td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+<div class="new-produto">
+    <h2 class="text-center">Adicionar Produto </h2>
+</div>
+</main>
 </body>
 </html>

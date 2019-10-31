@@ -18,10 +18,14 @@
   display: flex;
   align-items: center;
 }
+.logo h1 {
+  margin-top: 0.7rem;
+}
 .logo img {
   width: 6%;
 }
 ul {
+  margin-top: 1rem;
   display: flex;
   list-style: none;
 }
@@ -37,10 +41,11 @@ main {
   margin-top: 20px;
 }
 .lista {
-  width: 70%;
+  width: 68%;
 }
 .new-produto {
   width: 30%;
+  margin-left: 2%;
 }
 .lista > h2 {
   color: #293b44;
@@ -50,4 +55,20 @@ main {
   color: #ffffff;
   text-transform: uppercase;
   box-shadow: 2px 2px 6px 2px #cecece;
+}
+.form-all {
+  padding: 10px;
+  background: #293b4427;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px 2px #cecece;
+}
+.btn-my {
+  color: #fff;
+  background-color: #293b44;
+  border-color: #293b44;
+  margin-left: 70%;
+}
+.btn-my:hover {
+  background: #fff;
+  color: #293b44;
 }

@@ -1,6 +1,5 @@
 <?php
   require('config/function.php');
-
   if(isset($_POST['action'])){
     $img = $_FILES["img"]["name"];
     $imgTmp = $_FILES["img"]["tmp_name"];
